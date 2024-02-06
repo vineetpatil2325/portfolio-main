@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Acheivements</title>
+    <link rel="icon" href="./assets/png/vp1.png">
+    <meta name="description" content="Case study page of Project" />
+
+     <!-- Swiper CSS -->
+   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+ <style>
+    
+    .container {
+            
+            
+            justify-content: center; /* Aligns children horizontally */
+            align-items: center;
+            
+
+        }
+
+        
+        .achievement-post {
+            width: 100%;
+            max-width: 98rem;
+            padding: 5rem;
+            background-color: #dbf4ff21;
+            box-shadow: 0 1.4rem 8rem rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            border-radius: .8rem;
+            margin: 10px auto;
+        }
+
+        .achievement-post_img {
+            min-width: 35rem;
+            max-width: 35rem;
+            height: 30rem;
+            transform: translateX(-8rem);
+            position: relative;
+        }
+
+        .achievement-post_img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: .8rem;
+            display: block;
+        }
+
+        
+
+        .achievement-post_img img::before {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            box-shadow: .5rem .5rem 3rem 1px rgba(0, 0, 0, 0.5);
+            border-radius: .8rem;
+        }
+
+        .achievement-post_date span {
+            display: block;
+            color: #00000080;
+            font-size: 1.6rem;
+            font-weight: 600;
+            margin: .5rem 0;
+        }
+
+        .achievement-post_title {
+            font-size: 2.5rem;
+            margin: 1.5rem 0 2rem;
+            text-transform: uppercase;
+            color: #4facfe;
+        }
+
+        .achievement-post_text {
+            margin-bottom: 3rem;
+            font-size: 1.4rem;
+            color: #000000b3;
+        }
+
+        .achievement-post_cta {
+            display: inline-block;
+            padding: 1.5rem 3rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            color: #fff;
+            text-decoration: none;
+            border-radius: .8rem;
+            background: linear-gradient(to right, #c945cf 0%, #0062b9 100%);
+        }
+
+        .achievement-post_cta:hover {
+            background: linear-gradient(to right,  #0062b9 0%, #c945cf 100%);
+        }
+
+        @media screen and (max-width: 1068px) {
+            .achievement-post {
+                max-width: 80rem;
+            }
+            .achievement-post_img {
+                min-width: 30rem;
+                max-width: 30rem;
+            }
+            .container h2 {
+                margin-top: 120px;
+                margin-left: 275px;
+            }
+        }
+
+        @media screen and (max-width: 868px) {
+            .achievement-post {
+                max-width: 70rem;
+            }
+            .container h2 {
+                margin-top: 20px;
+                margin-left: 142px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .achievement-post {
+                padding: 2.5rem;
+                flex-direction: column;
+            }
+            .achievement-post_img {
+                min-width: 100%;
+                max-width: 100%;
+                transform: translate(0, -1rem);
+            }
+            .container {
+                margin-top: auto;
+            }
+        }
+
+        @media screen and (max-width: 823px) {
+            .container h2 {
+                margin-top: 35px;
+                margin-left: 142px;
+            }
+        }
+
+
+</style>
+    
+
+  
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/profilePhoto.jpg"
+              alt="Vineet"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Vineet Patil</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./courses.html" class="header__link">
+                Courses
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+                <a href="acheivements.html" class="header__link">
+                  Acheivements
+                </a>
+              </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./courses.html"> Courses </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+                <a href="acheivements.html"> Acheivements </a>
+              </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Acheivements</h1>
+        
+      </div>
+    </section>
+
+
+ 
+       
+    <section>
+        <div class="container">
+           
+            <div class="achievement-post">
+                <div class="achievement-post_img">
+                    <img src="./assets/jpeg/achievments_1.jpeg"
+                        alt="">
+                </div>
+                <div class="achievement-post_info">
+                    <div class="achievement-post_date">
+                        <span>Visited NTLF23</span>
+                        <span><strong>Date: </strong>March 1, 2023</span>
+                        <span><strong>Location: </strong>Mumbai</span>
+                    </div>
+                    <h1 class="achievement-post_title">NTLF23 : NASSCOM Technical Leadership Forum</h1>
+                    <p class="achievement-post_text">
+                        Privileged to represent my college at NTLF23, India's premier tech forum by NASSCOM. 
+                        Explored innovations at Microsoft, Google, TCS, Infosys, and Wipro stalls in Mumbai, gaining 
+                        valuable insights into cutting-edge technologies. Engaged with industry leaders, expanding my knowledge and networking. 
+                        This experience enhanced my understanding of the tech landscape and showcased my commitment to staying at the forefront of 
+                        advancements. Eager to apply these learnings in future endeavors.
+                    </p>
+                    <a href="https://drive.google.com/file/d/1B2hw5McZ2yhp1jXlzK4rFn_YCfySg3RM/view?usp=drive_link" class="achievement-post_cta" target="_blank">View</a>
+                </div>
+            </div>
+    
+            <div class="achievement-post">
+                <div class="achievement-post_img">
+                    <img src="./assets/jpeg/achievments_2.jpeg"
+                        alt="">
+                </div>
+                <div class="achievement-post_info">
+                    <div class="achievement-post_date">
+                        <span>Selected FSP Grand Ambassador</span>
+                        <span><strong>Date: </strong>January, 2023</span>
+                        <span><strong>Location: </strong>SVPCET College, Nagpur </span>
+                    </div>
+                    <h1 class="achievement-post_title">NASSCOM Future Skills Prime Grand Ambassador.</h1>
+                    <p class="achievement-post_text">
+                        Named Future Skills Prime Grand Ambassador by NASSCOM through my college, a moment of 
+                        immense pride. This recognition underscores my commitment to advancing technological skills 
+                        and promoting excellence in education. Eager to leverage this role to empower peers with future-ready
+                         competencies, contributing to a dynamic and thriving tech community. Grateful for the opportunity to champion
+                          innovation and skill development as a representative of the Future Skills initiative. Excited to make a lasting 
+                          impact on the future of technology
+                    </p>
+                    <a href="#" class="achievement-post_cta">View</a>
+                </div>
+            </div>
+
+
+            
+            <div class="achievement-post">
+                <div class="achievement-post_img">
+                    <img src="./assets/jpeg/acheivements_3.jpeg"
+                        alt="">
+                </div>
+                <div class="achievement-post_info">
+                    <div class="achievement-post_date">
+                        <span>Rising Star Award</span>
+                        <span><strong>Date: </strong>Setember, 2023</span>
+                        <span><strong>Location: </strong>Dataventics Software Solutions, Nagpur </span>
+                    </div>
+                    <h1 class="achievement-post_title">Rising Star Award</h1>
+                    <p class="achievement-post_text">
+                        Awarded the Rising Star for outstanding performance in UI/UX Designing at Dataventics Software Solutions within just 3 weeks of internship—an accomplishment that reflects dedication and impactful contributions to the field
+                    </p>
+                    <a href="https://drive.google.com/file/d/1PzuSU5sQQU0wql_19rmvslZTBcx4nrwo/view?usp=drive_link" class="achievement-post_cta" target="_blank">View</a>
+                </div>
+            </div>
+            
+
+            <div class="achievement-post">
+                <div class="achievement-post_img">
+                    <img src="./assets/jpeg/chievments_4.jpeg"
+                        alt="">
+                </div>
+                <div class="achievement-post_info">
+                    <div class="achievement-post_date">
+                        <span>APJSLV 2023 Coordinator</span>
+                        <span><strong>Date: </strong>January 23, 2022</span>
+                        <span><strong>Location: </strong>SVPCET College, Nagpur </span>
+                    </div>
+                    <h1 class="achievement-post_title">APJSLV 2023 Coordinator</h1>
+                    <p class="achievement-post_text">
+                        Selected for the coordinating team of APJSLV Mission-2023, led by Abdul Kalam Satellite Launch Vehicle, overseeing training sessions for cross-college students in the creation of pico satellites. Contributed to fostering education and hands-on experience in satellite technology for future innovators                    </p>
+                    <a href="https://drive.google.com/file/d/182xAf-4JigRzCnYcaJ6nfUkglp_4eJlm/view?usp=drive_link" class="achievement-post_cta">View</a>
+                </div>
+            </div>
+
+            
+            <div class="achievement-post">
+                <div class="achievement-post_img">
+                    <img src="./assets/jpeg/achievments_5.jpeg"
+                        alt="">
+                </div>
+                <div class="achievement-post_info">
+                    <div class="achievement-post_date">
+                        <span>Ideagenx Competition </span>
+                        <span><strong>Date: </strong>December, 2022</span>
+                        <span><strong>Location: </strong>SVPCET College, Nagpur </span>
+                    </div>
+                    <h1 class="achievement-post_title">Ideagenx Competition Runner-up</h1>
+                    <p class="achievement-post_text">
+                        Securing the Runner-up position in the Ideagenx Competition at my college was a testament 
+                        to my entrepreneurial spirit and innovative approach to startup concepts. The competition provided a
+                         platform to showcase my ability to formulate and present compelling business ideas, addressing real-world challenges with creativity and strategic thinking. </p>
+                     <a href="https://drive.google.com/file/d/1NXG4jpZ3h4vXSlXnFeYQkueDFdzHDk9D/view?usp=sharing" class="achievement-post_cta"  target="_blank">View</a>
+                </div>
+            </div>
+
+
+            <div class="achievement-post">
+                <div class="achievement-post_img">
+                    <img src="./assets/jpeg/achievments_6.jpeg"
+                        alt="">
+                </div>
+                <div class="achievement-post_info">
+                    <div class="achievement-post_date">
+                        <span>Python-Based Exhibition Coordinator </span>
+                        <span><strong>Date: </strong>November 14, 2021</span>
+                        <span><strong>Location: </strong>Raman Science Centre, Nagpur </span>
+                    </div>
+                    <h1 class="achievement-post_title">Python-Based Exhibition Coordinator</h1>
+                    <p class="achievement-post_text">
+                        Served as a key member of the coordinating team for a Python-based exhibition, where, under
+                         guidance, I developed 'Project Golfer' at the Raman Science Centre. This hands-on experience 
+                         exemplified my proficiency in Python programming and showcased the practical application of technology
+                          in an interactive and educational setting </p>
+                     <a href="https://drive.google.com/file/d/1QyvgyfYOH5YHGJlM18w0bihunRsqsNVd/view?usp=drive_link" class="achievement-post_cta" target="_blank">View</a>
+                </div>
+
+            </div>
+
+            <div class="achievement-post">
+                <div class="achievement-post_img">
+                    <img src="./assets/jpeg/achievments_7.jpeg"
+                        alt="">
+                </div>
+                <div class="achievement-post_info">
+                    <div class="achievement-post_date">
+                        <span>Coordinator </span>
+                        <span><strong>Date: </strong>July 10, 2022 </span>
+                        <span><strong>Location: </strong>Raman Science Centre, Nagpur </span>
+                    </div>
+                    <h1 class="achievement-post_title">AR/VR Session Coordinator</h1>
+                    <p class="achievement-post_text">
+                      Served as a key member of the coordinating team for an AR/VR-based session at Raman Science Centre,
+                      facilitating seamless logistics and arrangements for a Mumbai-based trainer. Contributed to bridging technological
+                      learning opportunities by orchestrating a successful immersive experience for college attendees. Collaborated with 
+                      <strong>Scopik Edutech Pvt. Ltd, Chennai</strong> and <strong> Science Centre</strong> to enhance the effectiveness and reach of the educational initiative.</p>
+                     <a target="_blank" href="https://drive.google.com/file/d/1B6bN9lEwch20JSETvqrohL08kPP_GErf/view?usp=sharing" class="achievement-post_cta">View</a>
+                </div>
+
+            </div>
+
+            <div class="achievement-post">
+              <div class="achievement-post_img">
+                  <img src="./assets/png/Emerging Technologies.jpg"
+                      alt="">
+              </div>
+              <div class="achievement-post_info">
+                  <div class="achievement-post_date">
+                      <span>Workshop Coordinator Certificate </span>
+                      <span><strong>Date: </strong>August 6, 2022 </span>
+                      <span><strong>Location: </strong>SVPCET, Nagpur </span>
+                  </div>
+                  <h1 class="achievement-post_title">Workshop Coordinator Certificate</h1>
+                  <p class="achievement-post_text">
+                    Certificate of Appreciation presented to Vineet Patil for outstanding coordination in the
+                     "Opportunities in Emerging Technologies" workshop at St. Vincent Pallotti College of Engineering & Technology,
+                      Nagpur, on August 6, 2022.</p>
+                   <a target="_blank" href="https://drive.google.com/file/d/1uQPkMV8hE87sCHQHyrh-HIP7sij_qLHu/view?usp=drive_link" class="achievement-post_cta">View</a>
+              </div>
+            </div>
+            
+              <div class="achievement-post">
+                <div class="achievement-post_img">
+                    <img src="./assets/png/TAKE IT IDEAS.jpg"
+                        alt="">
+                </div>
+                <div class="achievement-post_info">
+                    <div class="achievement-post_date">
+                        <span>Meet-Up Certificate </span>
+                        <span><strong>Date: </strong>August 7, 2022 </span>
+                        <span><strong>Location: </strong>Innovation Incubin Center, Nagpur </span>
+                    </div>
+                    <h1 class="achievement-post_title">Meet-Up Certificate</h1>
+                    <p class="achievement-post_text">
+                      This is to certify that Vineet participated in the Idea's Interns Meet-up, organized by Take IT Ideas Innovative Solutions Pvt. Ltd.,
+                       contributing ideas for the Artificial Intelligence-based Aptitude Development App System Architecture.</p>
+                     <a target="_blank" href="https://drive.google.com/file/d/11y7XQSgz7QpDsHjg54hDLWfCpyMhmA1h/view?usp=drive_link" class="achievement-post_cta">View</a>
+                </div>
+
+          </div>
+  
+    
+        </div>
+
+    </section>
+
+
+
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/vineet-patil-894540235/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/vineetpatil2325">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://join.skype.com/invite/t9KXl8wveUSK">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/skype.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="mailto:patilvineet442@gmail.com">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/email.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/vineetpatil25/">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Vineet Patil</h4>
+            <p class="main-footer__short-desc">
+              Here is my Social Media Handle you can connect with me there!
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy;  Made by
+          <a rel="noreferrer" target="_blank" 
+            >Vineet Patil</a>
+        </div>
+      </div>
+    </footer>
+
+     
+   
+
+
+
+
+  </body>
+
+
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- JavaScript -->
+  <script src="js/index.js"></script>
+
+
+  
+</script>
+
+</html>

@@ -1,0 +1,595 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Courses</title>
+    <link rel="icon" href="./assets/png/vp1.png">
+    <meta name="description" content="Case study page of Project" />
+
+     <!-- Swiper CSS -->
+   <link rel="stylesheet" href="css/swiper-bundle.min.css">
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      /* Add your custom styles here */
+      section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+      }
+
+     
+  
+      .slide-container {
+        max-width: 1120px;
+        width: 100%;
+        background-color: grey;
+        padding: 40px 0;
+      }
+  
+      .card-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+  
+      .card {
+        border-radius: 25px;
+        background-color: 	#F8F8FF;
+        width: 320px;
+        margin-right: 20px; /* Adjust the margin as needed */
+      }
+  
+      .image-content,
+      .card-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 14px;
+      }
+  
+      .image-content {
+        position: relative;
+        row-gap: 5px;
+        padding: 10px 14px;
+      }
+  
+      .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background-color: #4070f4;
+        border-radius: 25px 25px 0 25px;
+      }
+  
+      .overlay::before,
+      .overlay::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: -40px;
+        height: 40px;
+        width: 40px;
+        background-color: #4070f4;
+      }
+  
+      .overlay::after {
+        border-radius: 0 25px 0 0;
+        background-color: #efefef;
+      }
+  
+      .card-image {
+        position: relative;
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        background: 	#F8F8FF;
+        padding: 3px;
+      }
+  
+      .card-image .card-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid #0062b9;
+      }
+  
+      .name {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+      }
+  
+      .description {
+        font-size: 14px;
+        color: #000;
+        align-items: center;
+      }
+  
+      .button {
+        border: none;
+        font-size: 16px;
+        color: #fff;
+        padding: 8px 16px;
+        background-color: #4070f4;
+        border-radius: 6px;
+        margin: 14px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+  
+      .button:hover {
+        background: #265df2;
+      }
+    </style>
+
+  
+
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/profilePhoto.jpg"
+              alt="Vineet"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Vineet Patil</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./courses.html" class="header__link">
+                Courses
+              </a>
+            </li>
+
+            <li class="header__link-wrapper">
+              <a href="./acheivements.html" class="header__link">
+                Acheivements
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./courses.html"> Courses </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./acheivements.html"> Acheivements </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Courses</h1>
+        
+      </div>
+    </section>
+
+
+ 
+       
+    <section class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="/assets/png/googlecoursera.png" alt="UI UX img" >
+                </div>
+                <div class="card__content">
+                    <span class="card__title">Google UI UX Design</span>
+                    <span class="card__name">Online on Coursera </span>
+                    <p class="card__text">Google Certification in UI UX Designing in association with Tata Strive </p>
+                    <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1N5NhtnqMyMQCoBlxLrunu34iWyEPN7V8/view?usp=sharing', '_blank')">View Certificate</button>
+
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="/assets/jpeg/tcs.jpg" alt="card image">
+                </div>
+                <div class="card__content">
+                    <span class="card__title">TCS IHP Usability Design of Software Applications</span>
+                    <span class="card__name">Online by TCS iON</span>
+                    <p class="card__text">Successfully passed the Usability Design of Software Applications in association with TCS IHP  </p>
+                    <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1eDgWzPYFNlJVUazur0dQD-wGual5qPxJ/view?usp=sharing', '_blank')">View Certificate</button>
+
+                </div>
+            </div>
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="/assets/jpeg/tcs.jpg" alt="card image">
+                </div>
+                <div class="card__content">
+                    <span class="card__title">TCS iON Career Edge - Young Professional</span>
+                    <span class="card__name">Online by TCS iON</span>
+                    <p class="card__text">
+                      TCS iON Career Edge - Young Professional: Online course covering communication, presentation, soft skills, career guidance, and basics of AI. Perfect for enhancing skills essential for young professionals.</p>
+                      <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1P96WM14RXngZoXd7tcLhmvXXNjvztO21/view?usp=drive_link', '_blank')">View Certificate</button>
+                </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <div class="card__image">
+                  <img src="/assets/jpeg/nasscom.jpg" alt="card image">
+              </div>
+              <div class="card__content">
+                  <span class="card__title">Bronze in Jr. Software Developer</span>
+                  <span class="card__name">Offline by NASSCOM</span>
+                  <p class="card__text">Successfully passed the assessment for the role of Jr. Software Developer(QP No. - SSC/Q0508),
+                     meeting the National Skill Qualifications Framework Level 4 standards.
+                 </p>
+                 <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1OzD7IIceLeh459km6WvgTYWkpZBiH0WN/view?usp=drive_link', '_blank')">View Certificate</button>
+                </div>
+          </div>
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="/assets/jpeg/nasscom.jpg" alt="card image">
+                </div>
+                <div class="card__content">
+                    <span class="card__title">Gold in Web Developer</span>
+                    <span class="card__name">Offline by NASSCOM</span>
+                    <p class="card__text">Successfully passed the assessment for the role of Web Developer (QP No. - SSC/Q0503),
+                       meeting the National Skill Qualifications Framework Level 5 standards.
+                   </p>
+                   <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1NUE-URD7baM-3R84G47QgOVArPIYwgNr/view?usp=drive_link', '_blank')">View Certificate</button>
+                  </div>
+            </div>
+            
+            <div class="card swiper-slide">
+                <div class="card__image">
+                    <img src="/assets/jpeg/nasscom.jpg" alt="card image">
+                </div>
+                <div class="card__content">
+                    <span class="card__title">Gold in Test Engineer</span>
+                    <span class="card__name">Offline by NASSCOM</span>
+                    <p class="card__text"> Demonstrated proficiency in the assessment for the role of
+                      Test Engineer (SSC/Q1301) (QP No. -SSC/Q1301)
+                      in accordance with the National Skill Qualifications Framework </p>
+                      <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1NWkooCWRqGsBw2jzLFCSyNii5kISurIm/view?usp=drive_link', '_blank')">View Certificate</button>
+                    </div>
+            </div>
+
+            <div class="card swiper-slide">
+              <div class="card__image">
+                  <img src="/assets/jpeg/nasscom.jpg" alt="card image">
+              </div>
+              <div class="card__content">
+                  <span class="card__title">Gold in Application Developer Web & Mobile</span>
+                  <span class="card__name">Offline by NASSCOM</span>
+                  <p class="card__text"> Successfully completed the assessment for the role of
+                    Application Developer Web & Mobile (QP No. - SSC/Q8403)
+                    in accordance with the National Skill Qualifications Framework 6. </p>
+                    <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1O0WW2AMqvoNWhEsue9m30Ngg3TNjuDGa/view?usp=drive_link', '_blank')">View Certificate</button>
+                  </div>
+          </div>
+
+          <div class="card swiper-slide">
+            <div class="card__image">
+                <img src="/assets/png/nasscom-logo.png" alt="card image">
+            </div>
+            <div class="card__content">
+                <span class="card__title">Trubot Designer</span>
+                <span class="card__name">Online by FutureSkills Prime</span>
+                <p class="card__text">  Successfully cleared the TruBot Designer 
+                  assessment aligned with IT-ITES Sector Skills Council NASSCOM standards, 
+                  collaboratively developed and government-approved.</p>
+                  <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1NXa4oDKd2-u8zpr5eYsJT0fvvFTH99X4/view?usp=drive_link', '_blank')">View Certificate</button>
+                </div>
+        </div>
+
+          <div class="card swiper-slide">
+            <div class="card__image">
+                <img src="/assets/png/accenture-logo.png" alt="card image">
+            </div>
+            <div class="card__content">
+                <span class="card__title">Digital Skills: User Experience</span>
+                <span class="card__name">Online by FutureLearn</span>
+                <p class="card__text"> This course provided a comprehensive introduction to User Experience (UX)
+                   and highlighted its significance in the continually evolving digital landscape. </p>
+                   <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1HNsP93HotzuDgRayaF4nx4IiTFGqiAAu/view?usp=drive_link', '_blank')">View Certificate</button>
+                  </div>
+        </div>
+
+        
+        <div class="card swiper-slide">
+          <div class="card__image">
+              <img src="/assets/png/accenture-logo.png" alt="card image">
+          </div>
+          <div class="card__content">
+              <span class="card__title">Acquiring Data </span>
+              <span class="card__name">Online by Futureskills Prime (NASSCOM)</span>
+              <p class="card__text">  Acquiring Data (Level 1 - AI Fundamentals of AI ASCEND) by Accenture </p>
+                 <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1OgvX9WLM2qKr5nckW-bRv_qSLz_1zphz/view?usp=sharing', '_blank')">View Certificate</button>
+                </div>
+      </div>
+
+        <div class="card swiper-slide">
+          <div class="card__image">
+              <img src="/assets/png/udemy.png" alt="card image">
+          </div>
+          <div class="card__content">
+              <span class="card__title">Adobe Photoshop Coursefrom Basic to Advance </span>
+              <span class="card__name">Online by Udemy</span>
+              <p class="card__text"> Successfully completed the "Adobe Photoshop Course: 
+                From Basic to Advanced Graphics." </p>
+                <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1B3dGZqYhWA0F4lRMP7cE12Z__ITX8BWG/view?usp=drive_link', '_blank')">View Certificate</button>
+              </div>
+      </div>
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+            <img src="/assets/png/datamatics-logo.png" alt="card image">
+        </div>
+        <div class="card__content">
+            <span class="card__title">Trubot Designer</span>
+            <span class="card__name">Online by Futureskills Prime(NASSCOM)</span>
+            <p class="card__text"> Trubot Designer Accreted by NASSCOM, Approved by Government. </p>
+              <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1gimv82UpM5SZkCVZt-OqiaqZpo5u2zkS/view?usp=drive_link', '_blank')">View Certificate</button>
+            </div>
+    </div>
+
+
+
+      <div class="card swiper-slide">
+        <div class="card__image">
+            <img src="/assets/png/simplilearn-logo.png" alt="card image">
+        </div>
+        <div class="card__content">
+            <span class="card__title">Introduction to Flutter</span>
+            <span class="card__name">Online by Simplilearn</span>
+            <p class="card__text"> Successfully completed the "Introduction to Flutter" course </p>
+            <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1Z7yviWW5wlkNhCz6AI4l_ZbZsrIpefIu/view?usp=drive_link', '_blank')">View Certificate</button>
+          </div>
+    </div>
+
+    <div class="card swiper-slide">
+      <div class="card__image">
+          <img src="/assets/png/simplilearn-logo.png" alt="card image">
+      </div>
+      <div class="card__content">
+          <span class="card__title">Introduction to Graphic Design; Basics of UI/UX</span>
+          <span class="card__name">Online by Simplilearn</span>
+          <p class="card__text"> Successfully completed the "Introduction to Graphic Design; Basics of UI/UX" course </p>
+          <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1WpcPJCjyHoPxlQp4_LG6Jyt_eu1TqRnD/view?usp=drive_link', '_blank')">View Certificate</button>
+        </div>
+    </div>
+
+    <div class="card swiper-slide">
+      <div class="card__image">
+          <img src="/assets/png/coursera.png" alt="card image">
+      </div>
+      <div class="card__content">
+          <span class="card__title">Programming Fundamentals by Duke University</span>
+          <span class="card__name">Online by Coursera</span>
+          <p class="card__text"> Successfully completed the online non-credit course on "Programming Fundamentals," 
+            authorized by Duke University and offered through Coursera </p>
+            <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1Mz3MwzTfKPhxkwdo460hf3S6f0cujIDA/view?usp=drive_link', '_blank')">View Certificate</button>
+          </div>
+    </div>
+
+    <div class="card swiper-slide">
+      <div class="card__image">
+          <img src="/assets/jpeg/greatlearning.jpg" alt="card image">
+      </div>
+      <div class="card__content">
+          <span class="card__title">Intro to Graphic Designing with Photoshop</span>
+          <span class="card__name">Online by GreatLearning</span>
+          <p class="card__text"> Successfully completed "Intro to Graphic Designing with Photoshop" on GreatLearning Platform.</p>
+          <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1ChTcgZCu-TERcW-xBhBx6xTKfJTZPeBZ/view?usp=drive_link', '_blank')">View Certificate</button>
+        </div>
+    </div>
+
+     <div class="card swiper-slide">
+      <div class="card__image">
+          <img src="/assets/jpeg/greatlearning.jpg" alt="card image">
+      </div>
+      <div class="card__content">
+          <span class="card__title">UI/UX for Beginners</span>
+          <span class="card__name">Online by GreatLearning</span>
+          <p class="card__text"> Successfully completed "UI/UX for Beginners" on GreatLearning Platform.</p>
+          <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1xMtrDYLJq_QkEAFyFrkTApFEOoAf_sO3/view?usp=drive_link', '_blank')">View Certificate</button>
+      </div>
+    </div>
+
+    <div class="card swiper-slide">
+      <div class="card__image">
+          <img src="/assets/jpeg/greatlearning.jpg" alt="card image">
+      </div>
+      <div class="card__content">
+          <span class="card__title">Design Thinking for Beginners</span>
+          <span class="card__name">Online by GreatLearning</span>
+          <p class="card__text"> Successfully completed "Design Thinking for Beginners" on GreatLearning Platform.</p>
+          <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/1fPuPanf-mNqXMvObLQqenWZxUbnd_S3k/view?usp=drive_link', '_blank')">View Certificate</button>
+      </div>
+    </div>
+
+
+    <div class="card swiper-slide">
+      <div class="card__image">
+          <img src="/assets/jpeg/wadhwani.jpeg" alt="card image">
+      </div>
+      <div class="card__content">
+          <span class="card__title">i-Care Venture</span>
+          <span class="card__name">Online by Wadhwani Foundation</span>
+          <p class="card__text"> i-CARE Venture Certification: Recognized by global jury,
+             Vineet Patil from St. Vincent Pallotti College. Acknowledged as a promising 
+             venture in entrepreneurship by Wadhwani Foundation's NEN programs.</p>
+             <button class="card__btn" onclick="window.open('https://drive.google.com/file/d/12mDgmAZ5uEPwxEO7h3C6lhCDqh41_1GU/view?usp=drive_link', '_blank')">View Certificate</button>
+            </div>
+    </div>
+  </div>
+
+  </section>
+
+
+
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/vineet-patil-894540235/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/vineetpatil2325">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://join.skype.com/invite/t9KXl8wveUSK">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/skype.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="mailto:patilvineet442@gmail.com">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/email.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/vineetpatil25/">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Vineet Patil</h4>
+            <p class="main-footer__short-desc">
+              Here is my Social Media Handle you can connect with me there!
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy;  Made by
+          <a rel="noreferrer" target="_blank" 
+            >Vineet Patil</a>
+        </div>
+      </div>
+    </footer>
+
+     <!-- Swiper JS -->
+     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+     <!-- Initialize Swiper -->
+     <script>
+         var swiper = new Swiper(".mySwiper", {
+             effect: "coverflow",
+             grabCursor: true,
+             centeredSlides: true,
+             slidesPerView: "auto",
+             coverflowEffect: {
+                 rotate: 0,
+                 stretch: 0,
+                 depth: 300,
+                 modifier: 1,
+                 slideShadows: false,
+             },
+             pagination: {
+                 el: ".swiper-pagination",
+             },
+         });
+     </script>
+
+   
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+  </body>
+
+
+  <!-- Swiper JS -->
+  <script src="js/swiper-bundle.min.js"></script>
+
+  <!-- JavaScript -->
+  <script src="js/index.js"></script>
+
+
+  
+</script>
+
+</html>
